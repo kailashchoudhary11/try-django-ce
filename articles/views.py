@@ -43,10 +43,10 @@ def article_create_view(request):
     countcaseinsensitive = Article.objects.filter(title__iexact = 'kai').count()
     titleContainingKaiCaseSensitive = Article.objects.filter(title__contains = 'kai').count()
     titleContainingKaiCaseInSensitive = Article.objects.filter(title__icontains = 'kai').count()
-    # print(countcasesensitive)
-    # print(countcaseinsensitive)
-    # print(titleContainingKaiCaseSensitive)
-    # print(titleContainingKaiCaseInSensitive)
+    print(countcasesensitive)
+    print(countcaseinsensitive)
+    print(titleContainingKaiCaseSensitive)
+    print(titleContainingKaiCaseInSensitive)
         
     return render(request, "articles/create.html", context=context) 
 
